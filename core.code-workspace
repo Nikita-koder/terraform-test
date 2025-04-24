@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "name": "ROOT",
+            "path": ".",
+        },
+        {
+            "name": "Providers",
+            "path": "internal/provider",
+        },
+        {
+            "name": "Provider install verification",
+            "path": "examples/provider-install-verification"
+        }
+    ]
+}

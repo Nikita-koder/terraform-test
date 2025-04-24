@@ -1,0 +1,24 @@
+Ошибка: Error: Failed to load plugin schemas
+
+Текст ошибки:
+│ Error while loading schemas for plugin components: Failed to obtain provider schema: Could not load the schema for provider
+│ hashicorp.com/edu/hashicups: failed to instantiate provider "hashicorp.com/edu/hashicups" to obtain schema: Unrecognized
+│ remote plugin message: 
+│ Failed to read any lines from plugins stdout
+│ This usually means
+│   the plugin was not compiled for this architecture,
+│   the plugin is missing dynamic-link libraries necessary to run,
+│   the plugin is not executable by this process due to file permissions, or
+│   the plugin failed to negotiate the initial go-plugin protocol handshake
+│ 
+│ Additional notes about plugin:
+│   Path: /home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/amd64/terraform-provider-hashicups
+│   Mode: -rwxr-xr-x
+│   Owner: 1000 [nikita] (current: 1000 [nikita])
+│   Group: 1000 [nikita] (current: 1000 [nikita])
+│   ELF architecture: EM_X86_64 (current architecture: amd64)
+│ ..
+╵
+make: *** [GNUmakefile:54: terraform-plan] Ошибка 1
+
+Решение:

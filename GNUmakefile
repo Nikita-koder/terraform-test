@@ -51,7 +51,7 @@ terraform-init:
 	cd examples/provider-install-verification/ && terraform init -upgrade
 
 terraform-plan:
-	cd examples/provider-install-verification/ && sudo terraform plan
+	cd examples/provider-install-verification/ && terraform plan
 
 docker-up:
 	cd docker_compose && sudo docker compose up

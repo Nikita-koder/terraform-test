@@ -1,4 +1,4 @@
-version: '3.7'
+# version: '3.7'
 services:
   api:
     image: "hashicorpdemoapp/product-api:v0.0.22"

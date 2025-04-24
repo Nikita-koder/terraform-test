@@ -1,0 +1,794 @@
+2025-04-24T17:00:24.585+0300 [INFO]  Terraform version: 1.11.4
+2025-04-24T17:00:24.585+0300 [DEBUG] using github.com/hashicorp/go-tfe v1.70.0
+2025-04-24T17:00:24.585+0300 [DEBUG] using github.com/hashicorp/hcl/v2 v2.23.0
+2025-04-24T17:00:24.585+0300 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2025-04-24T17:00:24.585+0300 [DEBUG] using github.com/zclconf/go-cty v1.16.0
+2025-04-24T17:00:24.585+0300 [INFO]  Go runtime version: go1.23.3
+2025-04-24T17:00:24.585+0300 [INFO]  CLI args: []string{"terraform", "plan"}
+2025-04-24T17:00:24.585+0300 [TRACE] Stdout is a terminal of width 131
+2025-04-24T17:00:24.585+0300 [TRACE] Stderr is a terminal of width 131
+2025-04-24T17:00:24.585+0300 [TRACE] Stdin is a terminal
+2025-04-24T17:00:24.585+0300 [DEBUG] Attempting to open CLI config file: /home/nikita/.terraformrc
+2025-04-24T17:00:24.586+0300 [INFO]  Loading CLI configuration from /home/nikita/.terraformrc
+2025-04-24T17:00:24.586+0300 [DEBUG] checking for credentials in "/home/nikita/.terraform.d/plugins"
+2025-04-24T17:00:24.586+0300 [DEBUG] Explicit provider installation configuration is set
+2025-04-24T17:00:24.586+0300 [TRACE] Selected provider installation method cliconfig.ProviderInstallationDirect with includes [] and excludes []
+2025-04-24T17:00:24.586+0300 [INFO]  CLI command args: []string{"plan"}
+2025-04-24T17:00:24.586+0300 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2025-04-24T17:00:24.586+0300 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2025-04-24T17:00:24.586+0300 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2025-04-24T17:00:24.586+0300 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2025-04-24T17:00:24.586+0300 [DEBUG] Provider hashicorp.com/edu/hashicups is overridden by dev_overrides
+2025-04-24T17:00:24.586+0300 [DEBUG] Provider hashicorp.com/edu/hashicups is overridden to load from /home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64
+2025-04-24T17:00:24.586+0300 [DEBUG] checking for provisioner in "."
+2025-04-24T17:00:24.586+0300 [DEBUG] checking for provisioner in "/usr/local/bin"
+2025-04-24T17:00:24.586+0300 [DEBUG] checking for provisioner in "/home/nikita/.terraform.d/plugins"
+2025-04-24T17:00:24.587+0300 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2025-04-24T17:00:24.587+0300 [DEBUG] Provider hashicorp.com/edu/hashicups is overridden by dev_overrides
+2025-04-24T17:00:24.587+0300 [INFO]  backend/local: starting Plan operation
+2025-04-24T17:00:24.587+0300 [TRACE] backend/local: requesting state manager for workspace "default"
+2025-04-24T17:00:24.587+0300 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2025-04-24T17:00:24.587+0300 [TRACE] backend/local: requesting state lock for workspace "default"
+2025-04-24T17:00:24.587+0300 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2025-04-24T17:00:24.587+0300 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2025-04-24T17:00:24.587+0300 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2025-04-24T17:00:24.587+0300 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2025-04-24T17:00:24.587+0300 [TRACE] backend/local: reading remote state for workspace "default"
+2025-04-24T17:00:24.587+0300 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2025-04-24T17:00:24.587+0300 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2025-04-24T17:00:24.587+0300 [TRACE] statemgr.Filesystem: read nil snapshot
+2025-04-24T17:00:24.587+0300 [TRACE] backend/local: populating backendrun.LocalRun for current working directory
+2025-04-24T17:00:24.587+0300 [DEBUG] Config.VerifyDependencySelections: skipping hashicorp.com/edu/hashicups because it's overridden by a special configuration setting
+2025-04-24T17:00:24.587+0300 [TRACE] terraform.NewContext: starting
+2025-04-24T17:00:24.587+0300 [TRACE] terraform.NewContext: complete
+2025-04-24T17:00:24.587+0300 [TRACE] backend/local: requesting interactive input, if necessary
+2025-04-24T17:00:24.587+0300 [TRACE] LoadSchemas: retrieving schema for provider type "hashicorp.com/edu/hashicups"
+2025-04-24T17:00:24.587+0300 [TRACE] terraform.contextPlugins: Initializing provider "hashicorp.com/edu/hashicups" to read its schema
+2025-04-24T17:00:24.587+0300 [DEBUG] created provider logger: level=trace
+2025-04-24T17:00:24.587+0300 [INFO]  provider: configuring client automatic mTLS
+2025-04-24T17:00:24.602+0300 [DEBUG] provider: starting plugin: path=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups args=["/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups"]
+2025-04-24T17:00:24.602+0300 [DEBUG] provider: plugin started: path=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups pid=22579
+2025-04-24T17:00:24.602+0300 [DEBUG] provider: waiting for RPC address: plugin=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups
+2025-04-24T17:00:24.606+0300 [INFO]  provider.terraform-provider-hashicups: configuring server automatic mTLS: timestamp="2025-04-24T17:00:24.606+0300"
+2025-04-24T17:00:24.618+0300 [DEBUG] provider.terraform-provider-hashicups: plugin address: network=unix address=/tmp/plugin2459321453 timestamp="2025-04-24T17:00:24.618+0300"
+2025-04-24T17:00:24.618+0300 [DEBUG] provider: using plugin: version=6
+2025-04-24T17:00:24.628+0300 [TRACE] GRPCProvider.v6: GetProviderSchema
+2025-04-24T17:00:24.628+0300 [TRACE] provider.stdio: waiting for stdio data
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Received request: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:522 @module=sdk.proto tf_proto_version=6.8 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Sending request downstream: @module=sdk.proto tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 tf_proto_version=6.8 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderSchema lock: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:389 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Schema: tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:400 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Schema: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:402 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking ResourceTypes lock: tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:539 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderTypeName lock: tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:366 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Metadata: tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:377 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Metadata: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:379 @module=sdk.framework timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Resources: tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:550 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Resources: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:552 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking DataSourceTypes lock: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:210 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderTypeName lock: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:366 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider DataSources: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:221 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider DataSources: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:223 @module=sdk.framework timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Found data source type: tf_data_source_type=hashicups_coffees tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:244 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=GetProviderSchema timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined DataSource Schema: @module=sdk.framework tf_data_source_type=hashicups_coffees tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:340 tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=GetProviderSchema timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined DataSource Schema: @module=sdk.framework tf_data_source_type=hashicups_coffees tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:342 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking FunctionTypes lock: tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_functions.go:124 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking EphemeralResourceFuncs lock: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_ephemeralresources.go:38 @module=sdk.framework timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderTypeName lock: tf_rpc=GetProviderSchema @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:366 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Received downstream response: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:42 @module=sdk.proto diagnostic_error_count=0 diagnostic_warning_count=0 tf_req_duration_ms=0 tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=GetProviderSchema timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Announced server capabilities: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/server_capabilities.go:27 @module=sdk.proto tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 tf_server_capability_get_provider_schema_optional=true tf_server_capability_move_resource_state=true tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=GetProviderSchema tf_server_capability_plan_destroy=true timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.629+0300 [TRACE] provider.terraform-provider-hashicups: Served request: @module=sdk.proto tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=3fdb8fb3-60ac-3153-ab2a-dd7ed3012608 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:541 tf_rpc=GetProviderSchema timestamp="2025-04-24T17:00:24.629+0300"
+2025-04-24T17:00:24.630+0300 [DEBUG] No provider meta schema returned
+2025-04-24T17:00:24.630+0300 [TRACE] GRPCProvider.v6: Close
+2025-04-24T17:00:24.630+0300 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-04-24T17:00:24.631+0300 [INFO]  provider: plugin process exited: plugin=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups id=22579
+2025-04-24T17:00:24.631+0300 [DEBUG] provider: plugin exited
+2025-04-24T17:00:24.631+0300 [TRACE] Context.Input: Prompting for provider arguments
+2025-04-24T17:00:24.631+0300 [TRACE] Context.Input: Provider provider.hashicups declared at main.tf:11,1-21
+2025-04-24T17:00:24.631+0300 [TRACE] Context.Input: Input for provider.hashicups: map[string]cty.Value{}
+2025-04-24T17:00:24.631+0300 [TRACE] backend/local: running validation operation
+2025-04-24T17:00:24.631+0300 [TRACE] LoadSchemas: retrieving schema for provider type "hashicorp.com/edu/hashicups"
+2025-04-24T17:00:24.631+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.631+0300 [DEBUG] Building and walking validate graph
+2025-04-24T17:00:24.632+0300 [TRACE] building graph for walkValidate
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] ConfigTransformer: Starting for path:
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.variableValidationTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] variableValidationTransformer: adding validation nodes for any existing variable evaluation nodes
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.variableValidationTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.LocalTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.OutputTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] OutputTransformer: adding edu_coffees as *terraform.nodeExpandOutput
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.checkTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.checkTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.StateTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] StateTransformer: pointless no-op call, creating no nodes at all
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] AttachResourceConfigTransformer: attaching to "data.hashicups_coffees.edu" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:18, Column:1, Byte:287}, End:hcl.Pos{Line:18, Column:31, Byte:317}}
+2025-04-24T17:00:24.632+0300 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.hashicups_coffees.edu
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.externalProviderTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.externalProviderTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] ProviderConfigTransformer: attaching to "provider[\"hashicorp.com/edu/hashicups\"]" provider configuration from main.tf:11,1-21
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] ProviderTransformer: exact match for provider["hashicorp.com/edu/hashicups"] serving data.hashicups_coffees.edu
+2025-04-24T17:00:24.632+0300 [DEBUG] ProviderTransformer: "data.hashicups_coffees.edu" (*terraform.NodeValidatableResource) needs provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.632+0300 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.632+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.632+0300 [TRACE] AttachSchemaTransformer: attaching resource schema to data.hashicups_coffees.edu
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.ExternalReferenceTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.ExternalReferenceTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-04-24T17:00:24.632+0300 [DEBUG] ReferenceTransformer: "provider[\"hashicorp.com/edu/hashicups\"]" references: []
+2025-04-24T17:00:24.632+0300 [DEBUG] ReferenceTransformer: "data.hashicups_coffees.edu" references: []
+2025-04-24T17:00:24.632+0300 [DEBUG] ReferenceTransformer: "output.edu_coffees (expand)" references: [data.hashicups_coffees.edu]
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] AttachDependenciesTransformer: output.edu_coffees (expand) depends on [data.hashicups_coffees.edu]
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] attachDataDependenciesTransformer: data.hashicups_coffees.edu depends on []
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.attachDataResourceDependsOnTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] ForcedCBDTransformer: "data.hashicups_coffees.edu" (*terraform.NodeValidatableResource) has no CBD descendant, so skipping
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.ephemeralResourceCloseTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.ephemeralResourceCloseTransformer (no changes)
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-04-24T17:00:24.632+0300 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2025-04-24T17:00:24.632+0300 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-04-24T17:00:24.632+0300 [DEBUG] Starting graph walk: walkValidate
+2025-04-24T17:00:24.632+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"]": starting visit (*terraform.NodeApplyableProvider)
+2025-04-24T17:00:24.632+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"]": belongs to
+2025-04-24T17:00:24.632+0300 [DEBUG] created provider logger: level=trace
+2025-04-24T17:00:24.632+0300 [INFO]  provider: configuring client automatic mTLS
+2025-04-24T17:00:24.637+0300 [DEBUG] provider: starting plugin: path=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups args=["/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups"]
+2025-04-24T17:00:24.637+0300 [DEBUG] provider: plugin started: path=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups pid=22590
+2025-04-24T17:00:24.637+0300 [DEBUG] provider: waiting for RPC address: plugin=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups
+2025-04-24T17:00:24.640+0300 [INFO]  provider.terraform-provider-hashicups: configuring server automatic mTLS: timestamp="2025-04-24T17:00:24.640+0300"
+2025-04-24T17:00:24.652+0300 [DEBUG] provider.terraform-provider-hashicups: plugin address: address=/tmp/plugin488300362 network=unix timestamp="2025-04-24T17:00:24.652+0300"
+2025-04-24T17:00:24.652+0300 [DEBUG] provider: using plugin: version=6
+2025-04-24T17:00:24.661+0300 [TRACE] BuiltinEvalContext: Initialized "provider[\"hashicorp.com/edu/hashicups\"]" provider for provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.661+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.661+0300 [TRACE] NodeApplyableProvider: validating configuration for provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.661+0300 [TRACE] provider.stdio: waiting for stdio data
+2025-04-24T17:00:24.661+0300 [TRACE] buildProviderConfig for provider["hashicorp.com/edu/hashicups"]: using explicit config only
+2025-04-24T17:00:24.661+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.661+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.661+0300 [TRACE] GRPCProvider.v6: ValidateProviderConfig
+2025-04-24T17:00:24.661+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Received request: tf_proto_version=6.8 tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b tf_rpc=ValidateProviderConfig @module=sdk.proto @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:577 tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Skipping protocol data file writing because no data directory is set. Use the TF_LOG_SDK_PROTO_DATA_DIR environment variable to enable this functionality.: tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups @module=sdk.proto tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/internal/logging/protocol_data.go:41 tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Sending request downstream: tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b tf_rpc=ValidateProviderConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderSchema lock: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:389 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b tf_rpc=ValidateProviderConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Schema: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:400 @module=sdk.framework timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Schema: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:402 timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Received downstream response: @module=sdk.proto diagnostic_error_count=0 diagnostic_warning_count=0 tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_duration_ms=0 tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:42 timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Served request: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:597 tf_proto_version=6.8 tf_req_id=d4e60f44-b90f-11c0-c609-2a42b92e689b @module=sdk.proto tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateProviderConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"]": visit complete
+2025-04-24T17:00:24.662+0300 [TRACE] vertex "data.hashicups_coffees.edu": starting visit (*terraform.NodeValidatableResource)
+2025-04-24T17:00:24.662+0300 [TRACE] vertex "data.hashicups_coffees.edu": belongs to
+2025-04-24T17:00:24.662+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.662+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.662+0300 [DEBUG] skipping FixUpBlockAttrs
+2025-04-24T17:00:24.662+0300 [TRACE] GRPCProvider.v6: ValidateDataResourceConfig
+2025-04-24T17:00:24.662+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Received request: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:648 @module=sdk.proto tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig tf_proto_version=6.8 tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Sending request downstream: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 @module=sdk.proto tf_data_source_type=hashicups_coffees tf_proto_version=6.8 tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Checking DataSourceTypes lock: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:210 @module=sdk.framework tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderTypeName lock: tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:366 tf_data_source_type=hashicups_coffees @module=sdk.framework tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Metadata: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:377 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 tf_data_source_type=hashicups_coffees tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Metadata: @module=sdk.framework tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:379 tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider DataSources: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:221 @module=sdk.framework timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider DataSources: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:223 tf_data_source_type=hashicups_coffees tf_rpc=ValidateDataResourceConfig @module=sdk.framework timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Found data source type: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:244 @module=sdk.framework tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.662+0300 [TRACE] provider.terraform-provider-hashicups: Checking DataSourceTypes lock: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:210 @module=sdk.framework tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined DataSource Schema method: tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:302 tf_data_source_type=hashicups_coffees timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined DataSource Schema method: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:304 tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 @module=sdk.framework tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: DataSource implements DataSourceWithConfigure: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_validatedatasourceconfig.go:36 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 @module=sdk.framework tf_data_source_type=hashicups_coffees tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.662+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined DataSource Configure: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_validatedatasourceconfig.go:43 @module=sdk.framework tf_data_source_type=hashicups_coffees timestamp="2025-04-24T17:00:24.663+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined DataSource Configure: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_validatedatasourceconfig.go:45 @module=sdk.framework tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig tf_data_source_type=hashicups_coffees timestamp="2025-04-24T17:00:24.663+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Type implements TypeWithValidate: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:116 tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_attribute_path=coffees timestamp="2025-04-24T17:00:24.663+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Type Validate: tf_attribute_path=coffees tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:117 @module=sdk.framework tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.663+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Type Validate: tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_attribute_path=coffees tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:121 tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 timestamp="2025-04-24T17:00:24.663+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Received downstream response: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:42 diagnostic_error_count=0 diagnostic_warning_count=0 tf_proto_version=6.8 tf_rpc=ValidateDataResourceConfig @module=sdk.proto tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_duration_ms=0 tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 timestamp="2025-04-24T17:00:24.663+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] provider.terraform-provider-hashicups: Served request: tf_proto_version=6.8 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:668 @module=sdk.proto tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=fb36f28e-a70d-94cb-4372-4279b3d46b33 tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.663+0300"
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "data.hashicups_coffees.edu": visit complete
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees (expand)": starting visit (*terraform.nodeExpandOutput)
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees (expand)": does not belong to any module instance
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees (expand)": expanding dynamic subgraph
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"] (close)": does not belong to any module instance
+2025-04-24T17:00:24.663+0300 [TRACE] Expanding output: adding output.edu_coffees as *terraform.NodeApplyableOutput
+2025-04-24T17:00:24.663+0300 [TRACE] GRPCProvider.v6: Close
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees (expand)": entering dynamic subgraph
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees": starting visit (*terraform.NodeApplyableOutput)
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees": belongs to
+2025-04-24T17:00:24.663+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.663+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.663+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.663+0300 [TRACE] setValue: Saving Create change for output.edu_coffees in changeset
+2025-04-24T17:00:24.663+0300 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-04-24T17:00:24.663+0300 [TRACE] setValue: Saving value for output.edu_coffees in state
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees": visit complete
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "root": does not belong to any module instance
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "root": visit complete
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees (expand)": dynamic subgraph completed successfully
+2025-04-24T17:00:24.663+0300 [TRACE] vertex "output.edu_coffees (expand)": visit complete
+2025-04-24T17:00:24.664+0300 [INFO]  provider: plugin process exited: plugin=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups id=22590
+2025-04-24T17:00:24.664+0300 [DEBUG] provider: plugin exited
+2025-04-24T17:00:24.664+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"] (close)": visit complete
+2025-04-24T17:00:24.664+0300 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2025-04-24T17:00:24.664+0300 [TRACE] vertex "root": does not belong to any module instance
+2025-04-24T17:00:24.664+0300 [TRACE] vertex "root": visit complete
+2025-04-24T17:00:24.664+0300 [INFO]  backend/local: plan calling Plan
+2025-04-24T17:00:24.664+0300 [DEBUG] Building and walking plan graph for NormalMode
+2025-04-24T17:00:24.664+0300 [TRACE] building graph for walkPlan
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] ConfigTransformer: Starting for path:
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.variableValidationTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] variableValidationTransformer: adding validation nodes for any existing variable evaluation nodes
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.variableValidationTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.LocalTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.OutputTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] OutputTransformer: adding edu_coffees as *terraform.nodeExpandOutput
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  ------
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.checkTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.checkTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.StateTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] AttachResourceConfigTransformer: attaching to "data.hashicups_coffees.edu (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:18, Column:1, Byte:287}, End:hcl.Pos{Line:18, Column:31, Byte:317}}
+2025-04-24T17:00:24.664+0300 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.hashicups_coffees.edu (expand)
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.externalProviderTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.externalProviderTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  ------
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] ProviderConfigTransformer: attaching to "provider[\"hashicorp.com/edu/hashicups\"]" provider configuration from main.tf:11,1-21
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] ProviderTransformer: exact match for provider["hashicorp.com/edu/hashicups"] serving data.hashicups_coffees.edu (expand)
+2025-04-24T17:00:24.664+0300 [DEBUG] ProviderTransformer: "data.hashicups_coffees.edu (expand)" (*terraform.nodeExpandPlannableResource) needs provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.664+0300 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.664+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.664+0300 [TRACE] AttachSchemaTransformer: attaching resource schema to data.hashicups_coffees.edu (expand)
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.ExternalReferenceTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.ExternalReferenceTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-04-24T17:00:24.664+0300 [DEBUG] ReferenceTransformer: "data.hashicups_coffees.edu (expand)" references: []
+2025-04-24T17:00:24.664+0300 [DEBUG] ReferenceTransformer: "output.edu_coffees (expand)" references: [data.hashicups_coffees.edu (expand)]
+2025-04-24T17:00:24.664+0300 [DEBUG] ReferenceTransformer: "provider[\"hashicorp.com/edu/hashicups\"]" references: []
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] AttachDependenciesTransformer: output.edu_coffees (expand) depends on [data.hashicups_coffees.edu]
+2025-04-24T17:00:24.664+0300 [TRACE] AttachDependenciesTransformer: data.hashicups_coffees.edu (expand) depends on []
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] attachDataDependenciesTransformer: data.hashicups_coffees.edu depends on []
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.attachDataResourceDependsOnTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2025-04-24T17:00:24.664+0300 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2025-04-24T17:00:24.664+0300 [TRACE] ForcedCBDTransformer: "data.hashicups_coffees.edu (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendant, so skipping
+2025-04-24T17:00:24.665+0300 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2025-04-24T17:00:24.665+0300 [TRACE] Executing graph transform *terraform.ephemeralResourceCloseTransformer
+2025-04-24T17:00:24.665+0300 [TRACE] Completed graph transform *terraform.ephemeralResourceCloseTransformer (no changes)
+2025-04-24T17:00:24.665+0300 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2025-04-24T17:00:24.665+0300 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.665+0300 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2025-04-24T17:00:24.665+0300 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-04-24T17:00:24.665+0300 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2025-04-24T17:00:24.665+0300 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-04-24T17:00:24.665+0300 [DEBUG] Starting graph walk: walkPlan
+2025-04-24T17:00:24.665+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"]": starting visit (*terraform.NodeApplyableProvider)
+2025-04-24T17:00:24.665+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"]": belongs to
+2025-04-24T17:00:24.665+0300 [DEBUG] created provider logger: level=trace
+2025-04-24T17:00:24.665+0300 [INFO]  provider: configuring client automatic mTLS
+2025-04-24T17:00:24.669+0300 [DEBUG] provider: starting plugin: path=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups args=["/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups"]
+2025-04-24T17:00:24.670+0300 [DEBUG] provider: plugin started: path=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups pid=22599
+2025-04-24T17:00:24.670+0300 [DEBUG] provider: waiting for RPC address: plugin=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups
+2025-04-24T17:00:24.673+0300 [INFO]  provider.terraform-provider-hashicups: configuring server automatic mTLS: timestamp="2025-04-24T17:00:24.673+0300"
+2025-04-24T17:00:24.684+0300 [DEBUG] provider: using plugin: version=6
+2025-04-24T17:00:24.684+0300 [DEBUG] provider.terraform-provider-hashicups: plugin address: address=/tmp/plugin2166584092 network=unix timestamp="2025-04-24T17:00:24.684+0300"
+2025-04-24T17:00:24.692+0300 [TRACE] BuiltinEvalContext: Initialized "provider[\"hashicorp.com/edu/hashicups\"]" provider for provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.692+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.692+0300 [TRACE] NodeApplyableProvider: configuring provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.692+0300 [TRACE] buildProviderConfig for provider["hashicorp.com/edu/hashicups"]: using explicit config only
+2025-04-24T17:00:24.692+0300 [TRACE] provider.stdio: waiting for stdio data
+2025-04-24T17:00:24.692+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.692+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.692+0300 [TRACE] GRPCProvider.v6: ValidateProviderConfig
+2025-04-24T17:00:24.692+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Received request: tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:577 @module=sdk.proto tf_proto_version=6.8 tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Skipping protocol data file writing because no data directory is set. Use the TF_LOG_SDK_PROTO_DATA_DIR environment variable to enable this functionality.: tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/internal/logging/protocol_data.go:41 @module=sdk.proto tf_rpc=ValidateProviderConfig timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Sending request downstream: tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 tf_rpc=ValidateProviderConfig tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderSchema lock: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:389 timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Schema: tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:400 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Schema: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:402 @module=sdk.framework timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Received downstream response: @module=sdk.proto diagnostic_warning_count=0 tf_proto_version=6.8 tf_rpc=ValidateProviderConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:42 diagnostic_error_count=0 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_duration_ms=0 tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Served request: @module=sdk.proto tf_req_id=067f923b-4dbe-7535-e23a-467bba057f38 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:597 tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateProviderConfig timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] GRPCProvider.v6: ConfigureProvider
+2025-04-24T17:00:24.693+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Received request: tf_rpc=ConfigureProvider @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:549 @module=sdk.proto tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.693+0300 [TRACE] provider.terraform-provider-hashicups: Announced client capabilities: tf_client_capability_deferral_allowed=false tf_proto_version=6.8 tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d tf_rpc=ConfigureProvider @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/client_capabilities.go:38 @module=sdk.proto tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.694+0300 [TRACE] provider.terraform-provider-hashicups: Sending request downstream: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d tf_rpc=ConfigureProvider timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.694+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderSchema lock: tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d tf_rpc=ConfigureProvider @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:389 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.694+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Configure: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_configureprovider.go:15 @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d tf_rpc=ConfigureProvider timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.694+0300 [INFO]  provider.terraform-provider-hashicups: Configuring HashiCups client: @module=hashicups tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d tf_rpc=ConfigureProvider @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/internal/provider/provider.go:71 timestamp="2025-04-24T17:00:24.693+0300"
+2025-04-24T17:00:24.694+0300 [DEBUG] provider.terraform-provider-hashicups: Creating HashiCups client: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/internal/provider/provider.go:175 @module=hashicups tf_provider_addr=hashicorp.com/edu/hashicups hashicups_host=http://localhost:19090 hashicups_password="***" hashicups_username=education tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d tf_rpc=ConfigureProvider timestamp="2025-04-24T17:00:24.694+0300"
+2025-04-24T17:00:24.705+0300 [INFO]  provider.terraform-provider-hashicups: Configured HashiCups client: hashicups_username=education success=true tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ConfigureProvider @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/internal/provider/provider.go:194 hashicups_host=http://localhost:19090 hashicups_password="***" tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d @module=hashicups timestamp="2025-04-24T17:00:24.705+0300"
+2025-04-24T17:00:24.705+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Configure: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d tf_rpc=ConfigureProvider @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_configureprovider.go:23 timestamp="2025-04-24T17:00:24.705+0300"
+2025-04-24T17:00:24.705+0300 [TRACE] provider.terraform-provider-hashicups: Received downstream response: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:42 tf_proto_version=6.8 tf_req_duration_ms=11 tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d @module=sdk.proto diagnostic_error_count=0 diagnostic_warning_count=0 tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ConfigureProvider timestamp="2025-04-24T17:00:24.705+0300"
+2025-04-24T17:00:24.705+0300 [TRACE] provider.terraform-provider-hashicups: Served request: @module=sdk.proto tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ConfigureProvider @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:570 tf_proto_version=6.8 tf_req_id=d4769e9e-d5c0-1bde-44f3-b34b5168f08d timestamp="2025-04-24T17:00:24.705+0300"
+2025-04-24T17:00:24.705+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"]": visit complete
+2025-04-24T17:00:24.706+0300 [TRACE] vertex "data.hashicups_coffees.edu (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2025-04-24T17:00:24.706+0300 [TRACE] vertex "data.hashicups_coffees.edu (expand)": does not belong to any module instance
+2025-04-24T17:00:24.706+0300 [TRACE] vertex "data.hashicups_coffees.edu (expand)": expanding dynamic subgraph
+2025-04-24T17:00:24.706+0300 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2025-04-24T17:00:24.706+0300 [TRACE] ResourceCountTransformer: adding data.hashicups_coffees.edu as *terraform.NodePlannableResourceInstance
+2025-04-24T17:00:24.706+0300 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodePlannableResourceInstance
+  ------
+2025-04-24T17:00:24.706+0300 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2025-04-24T17:00:24.706+0300 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2025-04-24T17:00:24.706+0300 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-04-24T17:00:24.706+0300 [DEBUG] Resource instance state not found for node "data.hashicups_coffees.edu", instance data.hashicups_coffees.edu
+2025-04-24T17:00:24.706+0300 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2025-04-24T17:00:24.706+0300 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-04-24T17:00:24.706+0300 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2025-04-24T17:00:24.706+0300 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-04-24T17:00:24.706+0300 [DEBUG] ReferenceTransformer: "data.hashicups_coffees.edu" references: []
+2025-04-24T17:00:24.706+0300 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2025-04-24T17:00:24.706+0300 [TRACE] Executing graph transform *terraform.RootTransformer
+2025-04-24T17:00:24.706+0300 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  data.hashicups_coffees.edu - *terraform.NodePlannableResourceInstance
+  root - terraform.graphNodeRoot
+    data.hashicups_coffees.edu - *terraform.NodePlannableResourceInstance
+  ------
+2025-04-24T17:00:24.706+0300 [TRACE] vertex "data.hashicups_coffees.edu (expand)": entering dynamic subgraph
+2025-04-24T17:00:24.706+0300 [TRACE] vertex "data.hashicups_coffees.edu": starting visit (*terraform.NodePlannableResourceInstance)
+2025-04-24T17:00:24.706+0300 [TRACE] vertex "data.hashicups_coffees.edu": belongs to
+2025-04-24T17:00:24.706+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.706+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.706+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.706+0300 [DEBUG] skipping FixUpBlockAttrs
+2025-04-24T17:00:24.706+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.706+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.706+0300 [TRACE] readDataSource: Re-validating config for data.hashicups_coffees.edu
+2025-04-24T17:00:24.706+0300 [TRACE] GRPCProvider.v6: ValidateDataResourceConfig
+2025-04-24T17:00:24.706+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Received request: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:648 tf_proto_version=6.8 tf_rpc=ValidateDataResourceConfig @module=sdk.proto timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Sending request downstream: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b @module=sdk.proto tf_data_source_type=hashicups_coffees tf_proto_version=6.8 tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Checking DataSourceTypes lock: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:210 @module=sdk.framework tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Checking ProviderTypeName lock: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:366 @module=sdk.framework tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider Metadata: @module=sdk.framework tf_data_source_type=hashicups_coffees tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:377 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider Metadata: @module=sdk.framework tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:379 tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Provider DataSources: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:221 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b @module=sdk.framework tf_data_source_type=hashicups_coffees tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Provider DataSources: tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:223 @module=sdk.framework tf_data_source_type=hashicups_coffees timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Found data source type: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:244 @module=sdk.framework tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.706+0300 [TRACE] provider.terraform-provider-hashicups: Checking DataSourceTypes lock: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:210 tf_data_source_type=hashicups_coffees timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined DataSource Schema method: @module=sdk.framework tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:302 tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined DataSource Schema method: tf_provider_addr=hashicorp.com/edu/hashicups @module=sdk.framework tf_data_source_type=hashicups_coffees tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:304 timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: DataSource implements DataSourceWithConfigure: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_validatedatasourceconfig.go:36 @module=sdk.framework tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined DataSource Configure: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_validatedatasourceconfig.go:43 tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined DataSource Configure: @module=sdk.framework tf_data_source_type=hashicups_coffees @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_validatedatasourceconfig.go:45 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Type implements TypeWithValidate: tf_attribute_path=coffees tf_data_source_type=hashicups_coffees tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:116 timestamp="2025-04-24T17:00:24.706+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Type Validate: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:117 @module=sdk.framework tf_attribute_path=coffees tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Type Validate: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:121 tf_rpc=ValidateDataResourceConfig tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b @module=sdk.framework tf_attribute_path=coffees timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Received downstream response: diagnostic_warning_count=0 tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:42 @module=sdk.proto tf_provider_addr=hashicorp.com/edu/hashicups tf_req_duration_ms=0 diagnostic_error_count=0 tf_data_source_type=hashicups_coffees tf_proto_version=6.8 timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Served request: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:668 @module=sdk.proto tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_proto_version=6.8 tf_req_id=924b5f59-758d-67cc-4e8f-614c1f901f0b tf_rpc=ValidateDataResourceConfig timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] readDataSource: data.hashicups_coffees.edu configuration is complete, so reading from provider
+2025-04-24T17:00:24.707+0300 [TRACE] GRPCProvider.v6: ReadDataSource
+2025-04-24T17:00:24.707+0300 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=hashicorp.com/edu/hashicups
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Received request: tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:677 tf_data_source_type=hashicups_coffees tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups @module=sdk.proto tf_rpc=ReadDataSource timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Announced client capabilities: tf_client_capability_deferral_allowed=false tf_proto_version=6.8 tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource @module=sdk.proto tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/client_capabilities.go:52 timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Sending request downstream: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_data_source_type=hashicups_coffees tf_proto_version=6.8 tf_rpc=ReadDataSource @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Checking DataSourceTypes lock: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server.go:210 @module=sdk.framework tf_data_source_type=hashicups_coffees tf_rpc=ReadDataSource timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: DataSource implements DataSourceWithConfigure: tf_rpc=ReadDataSource @module=sdk.framework tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_readdatasource.go:63 timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined DataSource Configure: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_readdatasource.go:70 @module=sdk.framework tf_data_source_type=hashicups_coffees timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined DataSource Configure: @module=sdk.framework tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_readdatasource.go:72 tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ReadDataSource timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.707+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined DataSource Read: tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_readdatasource.go:102 tf_data_source_type=hashicups_coffees @module=sdk.framework timestamp="2025-04-24T17:00:24.707+0300"
+2025-04-24T17:00:24.711+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined DataSource Read: tf_rpc=ReadDataSource @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwserver/server_readdatasource.go:104 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_data_source_type=hashicups_coffees @module=sdk.framework timestamp="2025-04-24T17:00:24.711+0300"
+2025-04-24T17:00:24.711+0300 [TRACE] provider.terraform-provider-hashicups: Type implements TypeWithValidate: @module=sdk.framework @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:116 tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource timestamp="2025-04-24T17:00:24.711+0300"
+2025-04-24T17:00:24.711+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Type Validate: @module=sdk.framework tf_data_source_type=hashicups_coffees tf_rpc=ReadDataSource @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:117 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 timestamp="2025-04-24T17:00:24.711+0300"
+2025-04-24T17:00:24.711+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Type Validate: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:121 tf_provider_addr=hashicorp.com/edu/hashicups @module=sdk.framework tf_data_source_type=hashicups_coffees tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource timestamp="2025-04-24T17:00:24.711+0300"
+2025-04-24T17:00:24.711+0300 [TRACE] provider.terraform-provider-hashicups: Type implements TypeWithValidate: @module=sdk.framework tf_provider_addr=hashicorp.com/edu/hashicups tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:116 tf_data_source_type=hashicups_coffees tf_rpc=ReadDataSource timestamp="2025-04-24T17:00:24.711+0300"
+2025-04-24T17:00:24.711+0300 [TRACE] provider.terraform-provider-hashicups: Calling provider defined Type Validate: tf_data_source_type=hashicups_coffees tf_provider_addr=hashicorp.com/edu/hashicups @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:117 @module=sdk.framework tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource timestamp="2025-04-24T17:00:24.711+0300"
+2025-04-24T17:00:24.711+0300 [TRACE] provider.terraform-provider-hashicups: Called provider defined Type Validate: @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-framework/internal/fwschemadata/data_value.go:121 tf_provider_addr=hashicorp.com/edu/hashicups tf_rpc=ReadDataSource tf_data_source_type=hashicups_coffees tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 @module=sdk.framework timestamp="2025-04-24T17:00:24.711+0300"
+2025-04-24T17:00:24.712+0300 [TRACE] provider.terraform-provider-hashicups: Received downstream response: @module=sdk.proto diagnostic_error_count=0 diagnostic_warning_count=0 tf_data_source_type=hashicups_coffees tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups tf_req_duration_ms=4 tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/internal/tf6serverlogging/downstream_request.go:42 timestamp="2025-04-24T17:00:24.712+0300"
+2025-04-24T17:00:24.712+0300 [TRACE] provider.terraform-provider-hashicups: Served request: @module=sdk.proto tf_req_id=306f4871-cbf8-cbcc-b75b-a957b0823d25 tf_rpc=ReadDataSource @caller=/home/nikita/Programming/test_terraform/terraform-provider-hashicups/vendor/github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server/server.go:706 tf_data_source_type=hashicups_coffees tf_proto_version=6.8 tf_provider_addr=hashicorp.com/edu/hashicups timestamp="2025-04-24T17:00:24.712+0300"
+2025-04-24T17:00:24.712+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.712+0300 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to refreshState for data.hashicups_coffees.edu
+2025-04-24T17:00:24.712+0300 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for data.hashicups_coffees.edu
+2025-04-24T17:00:24.713+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.713+0300 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to workingState for data.hashicups_coffees.edu
+2025-04-24T17:00:24.713+0300 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for data.hashicups_coffees.edu
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "data.hashicups_coffees.edu": visit complete
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "root": does not belong to any module instance
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "root": visit complete
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "data.hashicups_coffees.edu (expand)": dynamic subgraph completed successfully
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "data.hashicups_coffees.edu (expand)": visit complete
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "output.edu_coffees (expand)": starting visit (*terraform.nodeExpandOutput)
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "output.edu_coffees (expand)": does not belong to any module instance
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "output.edu_coffees (expand)": expanding dynamic subgraph
+2025-04-24T17:00:24.713+0300 [TRACE] Expanding output: adding output.edu_coffees as *terraform.NodeApplyableOutput
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "output.edu_coffees (expand)": entering dynamic subgraph
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"] (close)": does not belong to any module instance
+2025-04-24T17:00:24.713+0300 [TRACE] GRPCProvider.v6: Close
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "output.edu_coffees": starting visit (*terraform.NodeApplyableOutput)
+2025-04-24T17:00:24.713+0300 [TRACE] vertex "output.edu_coffees": belongs to
+2025-04-24T17:00:24.713+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.713+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.713+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.713+0300 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-04-24T17:00:24.713+0300 [TRACE] setValue: Saving Create change for output.edu_coffees in changeset
+2025-04-24T17:00:24.713+0300 [TRACE] setValue: Saving value for output.edu_coffees in state
+2025-04-24T17:00:24.714+0300 [TRACE] setValue: Saving value for output.edu_coffees in state
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "output.edu_coffees": visit complete
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "root": does not belong to any module instance
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "root": visit complete
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "output.edu_coffees (expand)": dynamic subgraph completed successfully
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "output.edu_coffees (expand)": visit complete
+2025-04-24T17:00:24.714+0300 [INFO]  provider: plugin process exited: plugin=/home/nikita/.terraform.d/plugins/hashicorp.com/edu/hashicups/0.1.0/linux_amd64/terraform-provider-hashicups id=22599
+2025-04-24T17:00:24.714+0300 [DEBUG] provider: plugin exited
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "provider[\"hashicorp.com/edu/hashicups\"] (close)": visit complete
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "root": does not belong to any module instance
+2025-04-24T17:00:24.714+0300 [TRACE] vertex "root": visit complete
+2025-04-24T17:00:24.714+0300 [TRACE] LoadSchemas: retrieving schema for provider type "hashicorp.com/edu/hashicups"
+2025-04-24T17:00:24.714+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.714+0300 [TRACE] LoadSchemas: retrieving schema for provider type "hashicorp.com/edu/hashicups"
+2025-04-24T17:00:24.714+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.715+0300 [TRACE] Plan is complete
+2025-04-24T17:00:24.715+0300 [TRACE] Plan is applyable
+2025-04-24T17:00:24.715+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.715+0300 [TRACE] LoadSchemas: retrieving schema for provider type "hashicorp.com/edu/hashicups"
+2025-04-24T17:00:24.715+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.715+0300 [DEBUG] building apply graph to check for errors
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] ConfigTransformer: Starting for path:
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.variableValidationTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] variableValidationTransformer: adding validation nodes for any existing variable evaluation nodes
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.variableValidationTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.LocalTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.OutputTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] OutputTransformer: adding edu_coffees as *terraform.nodeExpandOutput
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.DiffTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.DiffTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.DeferredTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.DeferredTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.checkTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.checkTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] AttachResourceConfigTransformer: attaching to "data.hashicups_coffees.edu (expand)" (*terraform.nodeExpandApplyableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:18, Column:1, Byte:287}, End:hcl.Pos{Line:18, Column:31, Byte:317}}
+2025-04-24T17:00:24.715+0300 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.hashicups_coffees.edu (expand)
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.externalProviderTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.externalProviderTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] ProviderConfigTransformer: attaching to "provider[\"hashicorp.com/edu/hashicups\"]" provider configuration from main.tf:11,1-21
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] ProviderTransformer: exact match for provider["hashicorp.com/edu/hashicups"] serving data.hashicups_coffees.edu (expand)
+2025-04-24T17:00:24.715+0300 [DEBUG] ProviderTransformer: "data.hashicups_coffees.edu (expand)" (*terraform.nodeExpandApplyableResource) needs provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.715+0300 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["hashicorp.com/edu/hashicups"]
+2025-04-24T17:00:24.715+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.715+0300 [TRACE] AttachSchemaTransformer: attaching resource schema to data.hashicups_coffees.edu (expand)
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.ExternalReferenceTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.ExternalReferenceTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-04-24T17:00:24.715+0300 [DEBUG] ReferenceTransformer: "data.hashicups_coffees.edu (expand)" references: []
+2025-04-24T17:00:24.715+0300 [DEBUG] ReferenceTransformer: "output.edu_coffees (expand)" references: [data.hashicups_coffees.edu (expand)]
+2025-04-24T17:00:24.715+0300 [DEBUG] ReferenceTransformer: "provider[\"hashicorp.com/edu/hashicups\"]" references: []
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] AttachDependenciesTransformer: output.edu_coffees (expand) depends on [data.hashicups_coffees.edu]
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.checkStartTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.checkStartTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] ForcedCBDTransformer: "data.hashicups_coffees.edu (expand)" (*terraform.nodeExpandApplyableResource) has no CBD descendant, so skipping
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.ephemeralResourceCloseTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.ephemeralResourceCloseTransformer (no changes)
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-04-24T17:00:24.715+0300 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2025-04-24T17:00:24.715+0300 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+    provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  provider["hashicorp.com/edu/hashicups"] - *terraform.NodeApplyableProvider
+  provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+    data.hashicups_coffees.edu (expand) - *terraform.nodeExpandApplyableResource
+  root - *terraform.nodeCloseModule
+    output.edu_coffees (expand) - *terraform.nodeExpandOutput
+    provider["hashicorp.com/edu/hashicups"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-04-24T17:00:24.715+0300 [INFO]  backend/local: plan operation completed
+2025-04-24T17:00:24.715+0300 [TRACE] LoadSchemas: retrieving schema for provider type "hashicorp.com/edu/hashicups"
+2025-04-24T17:00:24.715+0300 [TRACE] terraform.contextPlugins: Schema for provider "hashicorp.com/edu/hashicups" is in the global cache
+2025-04-24T17:00:24.716+0300 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2025-04-24T17:00:24.716+0300 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock

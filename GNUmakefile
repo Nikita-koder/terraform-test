@@ -4,7 +4,10 @@ HOSTNAME=hashicorp.com
 NAMESPACE=edu
 NAME=hashicups
 VERSION=0.1.0
-OS_ARCH=amd64
+OS_ARCH=linux_amd64
+LESSON=orders
+TF_LOG=INFO # TRACE, DEBUG, INFO, WARN, ERROR
+TF_LOG_PATH=logs/trace.txt
 
 default: fmt lint install generate
 
@@ -48,13 +51,16 @@ testacc:
 	TF_ACC=1 go test -v -cover -timeout 120m ./...
 
 terraform-init:
-	cd examples/provider-install-verification/ && terraform init -upgrade
+	cd examples/${LESSON}/ && terraform init -upgrade
 
 terraform-plan:
-	cd examples/provider-install-verification/ && terraform plan
+	cd examples/${LESSON}/ && HASHICUPS_HOST=http://localhost:19090 \
+	HASHICUPS_USERNAME=education \
+	HASHICUPS_PASSWORD=test123 \
+	TF_LOG=${TF_LOG} TF_LOG_PATH=${TF_LOG_PATH} terraform plan
 
 docker-up:
-	cd docker_compose && sudo docker compose up
+	cd docker_compose && whoami && docker compose up
 
 
 .PHONY: fmt lint test testacc build install generate

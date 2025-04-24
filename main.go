@@ -11,7 +11,6 @@ import (
 	"terraform-provider-hashicups/internal/provider"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
-	"github.com/joho/godotenv"
 )
 
 var (
@@ -25,10 +24,7 @@ var (
 
 func main() {
 	var err error
-	err = godotenv.Load("envs/.env")
-	if err != nil {
-		log.Fatal(err.Error())
-	}
+
 	var debug bool
 
 	flag.BoolVar(&debug, "debug", false, "set to true to run the provider with support for debuggers like delve")

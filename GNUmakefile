@@ -25,7 +25,7 @@ build-linux:
 	mv $(BIN_NAME) $(BIN_DIR)
 
 
-install_local: build
+install-local: build
 	rm -f .terraform.lock.hcl
 	rm -f ~/.terraform.d/plugins/${HOSTNAME}/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}/${BIN_NAME}
 	mkdir -p ~/.terraform.d/plugins/${HOSTNAME}/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}/

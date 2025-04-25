@@ -6,6 +6,7 @@ import (
 
 	"github.com/hashicorp-demoapp/hashicups-client-go"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
+	"github.com/hashicorp/terraform-plugin-framework/function"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
@@ -16,7 +17,8 @@ import (
 
 // Ensure the implementation satisfies the expected interfaces.
 var (
-	_ provider.Provider = &hashicupsProvider{}
+	_ provider.Provider              = &hashicupsProvider{}
+	_ provider.ProviderWithFunctions = &hashicupsProvider{}
 )
 
 // New is a helper function to simplify provider server and testing implementation.
@@ -40,6 +42,12 @@ type hashicupsProvider struct {
 	// provider is built and ran locally, and "test" when running acceptance
 	// testing.
 	version string
+}
+
+func (p *hashicupsProvider) Functions(_ context.Context) []func() function.Function {
+	return []func() function.Function{
+		NewComputeTaxFunction,
+	}
 }
 
 // Metadata returns the provider type name.
